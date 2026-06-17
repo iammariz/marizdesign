@@ -28,10 +28,14 @@
           <div class="portfolio-meta">
             <span class="meta">Case Study · Enterprise UX · 04</span>
           </div>
-          <h1>Work Schedule System</h1>
-          <p class="portfolio-lead">A workforce scheduling platform that handles shift assignments, attendance tracking, schedule change requests, and team calendar views — designed to reduce scheduling conflicts and give managers full visibility over their workforce.</p>
+          <h1>WorkSync Manager — Work Schedule System</h1>
+          <p class="portfolio-lead">A workforce scheduling platform for shift management, timesheet tracking, and leave requests — giving managers real-time visibility into employee schedules, work hours, and team availability across departments.</p>
           <div class="portfolio-tags">
             <span>Figma</span><span>Calendar UI</span><span>Scheduling</span><span>Workforce</span><span>HTML/CSS</span>
+          </div>
+          <div class="portfolio-actions">
+            <a class="button" href="#" target="_blank" rel="noopener">View Figma Mockup <i data-lucide="figma"></i></a>
+            <a class="button secondary" href="#" target="_blank" rel="noopener">View Live Demo <i data-lucide="external-link"></i></a>
           </div>
         </div>
       </div>
@@ -63,53 +67,40 @@
     <section class="portfolio-section">
       <div class="container">
 
-        <div class="portfolio-block reveal">
-          <div class="portfolio-block-text">
-            <span class="block-label">Overview</span>
-            <h2>Scheduling without the chaos</h2>
-            <p>Managers were manually building shift schedules in spreadsheets, leading to conflicts, miscommunications, and last-minute gaps in coverage. Employees had no clear way to view their schedules or request changes without going through their supervisor directly.</p>
-            <p>The Work Schedule System was designed to give managers a structured, visual way to build and manage schedules — and give employees transparency and self-service control over their own time.</p>
+        <!-- Challenge + Login side by side -->
+        <div class="cs-split reveal">
+          <div class="cs-split-text">
+            <span class="block-label">The Challenge</span>
+            <h2>Workforce visibility without the chaos</h2>
+            <p>Managers were tracking employee schedules, timesheets, and leave requests across disconnected systems and manual spreadsheets. There was no single view to see who was working, who was on leave, or what shifts needed coverage.</p>
+            <p>I designed WorkSync Manager to bring workforce management into one platform — with real-time schedule views, timesheet tracking, and leave management all in a unified dashboard.</p>
           </div>
-        </div>
-
-        <div class="cs-image-placeholder reveal">
-          <div class="cs-placeholder-inner">
-            <div class="cs-placeholder-mockup">
-              <div class="mockup-bar">
+          <div class="cs-split-screen">
+            <div class="cs-screen-frame">
+              <div class="cs-screen-bar">
                 <div class="mockup-dots"><span></span><span></span><span></span></div>
-                <div class="mockup-url">schedule.app / team-calendar</div>
+                <div class="mockup-url">worksync.app / login</div>
               </div>
-              <div class="mockup-body">
-                <div class="mockup-sidebar">
-                  <div class="mockup-nav-item active"></div>
-                  <div class="mockup-nav-item"></div>
-                  <div class="mockup-nav-item"></div>
-                  <div class="mockup-nav-item"></div>
-                </div>
-                <div class="mockup-content">
-                  <div class="mockup-header-row">
-                    <div class="mockup-title-block"></div>
-                    <div class="mockup-action-btn"></div>
-                  </div>
-                  <div class="mockup-stats-row">
-                    <div class="mockup-stat-card"><div class="mockup-stat-num"></div><div class="mockup-stat-label"></div></div>
-                    <div class="mockup-stat-card"><div class="mockup-stat-num"></div><div class="mockup-stat-label"></div></div>
-                    <div class="mockup-stat-card"><div class="mockup-stat-num"></div><div class="mockup-stat-label"></div></div>
-                  </div>
-                  <div class="mockup-table">
-                    <div class="mockup-table-header"></div>
-                    <div class="mockup-table-row"></div>
-                    <div class="mockup-table-row"></div>
-                    <div class="mockup-table-row"></div>
-                    <div class="mockup-table-row"></div>
-                  </div>
-                </div>
-              </div>
+              <img src="img-portfolio/workschedule/Login.jpg" alt="WorkSync Manager Login Page" loading="lazy">
             </div>
-            <p class="cs-placeholder-label">Screenshot placeholder — replace with actual project image</p>
+            <p class="cs-screen-caption">Login — purple gradient background with the "WorkSync Manager" brand and clean credential form</p>
           </div>
         </div>
 
+        <!-- Full-width Dashboard -->
+        <div class="cs-fullscreen reveal">
+          <span class="block-label">Workforce Management Dashboard</span>
+          <div class="cs-screen-frame" style="margin-top: 16px;">
+            <div class="cs-screen-bar">
+              <div class="mockup-dots"><span></span><span></span><span></span></div>
+              <div class="mockup-url">worksync.app / home</div>
+            </div>
+            <img src="img-portfolio/workschedule/Home.jpg" alt="WorkSync Manager Dashboard" loading="lazy">
+          </div>
+          <p class="cs-screen-caption" style="margin-top: 12px;">Home — employee profile with stats (scheduled hours, worked hours, leave requests), team schedule table, timesheet summary, leave request form, and shift management tools all in one view</p>
+        </div>
+
+        <!-- Key Modules -->
         <div class="portfolio-block reveal">
           <div class="portfolio-block-text">
             <span class="block-label">Key Modules</span>
@@ -118,42 +109,43 @@
           <div class="deliverables-grid">
             <div class="deliverable-item reveal">
               <div class="deliverable-icon"><i data-lucide="calendar-days"></i></div>
-              <h3>Team Calendar View</h3>
-              <p>Weekly and monthly calendar views showing assigned shifts per employee — with color-coded shift types, absence indicators, and team coverage at a glance.</p>
+              <h3>Home Dashboard</h3>
+              <p>Employee hub with personal stats (scheduled hours, worked hours, leave requests), quick access to timesheet, schedule, and leave tools — all in a clean sidebar navigation layout.</p>
             </div>
             <div class="deliverable-item reveal">
-              <div class="deliverable-icon"><i data-lucide="shuffle"></i></div>
-              <h3>Shift Assignment</h3>
-              <p>Drag-and-assign interface for managers to build schedules — with conflict detection, minimum coverage alerts, and bulk assignment tools.</p>
+              <div class="deliverable-icon"><i data-lucide="users"></i></div>
+              <h3>My Schedule</h3>
+              <p>Personal schedule view with shift details, work hours, and upcoming assignments — giving employees full visibility into their work calendar.</p>
             </div>
             <div class="deliverable-item reveal">
               <div class="deliverable-icon"><i data-lucide="clock"></i></div>
-              <h3>Attendance Monitoring</h3>
-              <p>Daily time-in/out logs, late and absent flags, overtime tracking, and exportable attendance reports per department or individual.</p>
+              <h3>Timesheet Tracking</h3>
+              <p>Work hours log with daily breakdown, total hours calculation, and status tracking — enabling accurate payroll and attendance monitoring.</p>
             </div>
             <div class="deliverable-item reveal">
-              <div class="deliverable-icon"><i data-lucide="repeat"></i></div>
-              <h3>Schedule Change Requests</h3>
-              <p>Employee-submitted shift swap and schedule change requests — with manager approval flow, reason tracking, and notification system.</p>
+              <div class="deliverable-icon"><i data-lucide="calendar-x"></i></div>
+              <h3>Leave Requests</h3>
+              <p>Streamlined leave application form with date range selection, reason input, and manager approval workflow — replacing paper-based leave systems.</p>
             </div>
             <div class="deliverable-item reveal">
-              <div class="deliverable-icon"><i data-lucide="bell"></i></div>
-              <h3>Notifications & Reminders</h3>
-              <p>Automated shift reminders, approval status updates, and scheduling alerts sent to both managers and employees.</p>
+              <div class="deliverable-icon"><i data-lucide="contact"></i></div>
+              <h3>Contact Directory</h3>
+              <p>Employee contact list accessible within the platform — connecting team members for shift swaps and schedule coordination.</p>
             </div>
             <div class="deliverable-item reveal">
               <div class="deliverable-icon"><i data-lucide="layout-dashboard"></i></div>
-              <h3>Manager Dashboard</h3>
-              <p>Summary of today's coverage, pending requests, absent employees, and overtime hours — giving managers a daily operational snapshot.</p>
+              <h3>Team Schedule View</h3>
+              <p>Manager dashboard with full team schedule table — showing all employees, their shifts, work status, and leave status for complete workforce visibility.</p>
             </div>
           </div>
         </div>
 
-        <div class="portfolio-block reveal">
-          <div class="portfolio-block-text">
+        <!-- Outcome -->
+        <div class="cs-outcome reveal">
+          <div class="cs-outcome-inner">
             <span class="block-label">Outcome</span>
-            <h2>Fewer conflicts, better coverage</h2>
-            <p>The system eliminated manual scheduling spreadsheets and reduced scheduling conflicts. Managers could build and adjust schedules in minutes, employees had full visibility into their shifts, and HR had accurate attendance data without manual compilation.</p>
+            <h2>Scheduling clarity for managers and staff</h2>
+            <p>WorkSync Manager replaced manual scheduling and leave tracking with a unified, self-service platform. Employees could view their schedules, log timesheets, and request leave in one place. Managers gained real-time visibility into team availability, reducing scheduling conflicts and coverage gaps.</p>
           </div>
         </div>
 
