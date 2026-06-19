@@ -58,10 +58,19 @@
   padding: 7px 16px;
   border: 1px solid rgba(168, 85, 247, 0.25);
   border-radius: 999px;
-  background: rgba(139, 92, 246, 0.08);
-  color: #d8b4fe;
-  font-size: 13px;
-  font-weight: 500;
+}
+
+.portfolio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.portfolio-actions .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* Overview bar */
@@ -445,6 +454,96 @@
   margin-bottom: 80px;
 }
 
+.cs-split--reversed {
+  grid-template-columns: 1.1fr 1fr;
+}
+
+/* ── Websites Grid (2 column) ── */
+
+.websites-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.website-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.website-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.website-info h2 {
+  font-size: clamp(22px, 2.5vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.website-info p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.website-info .button {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.website-thumb {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.website-thumb:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.website-crop {
+  height: 240px;
+  overflow: hidden;
+}
+
+.website-crop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media (max-width: 900px) {
+  .websites-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .website-crop {
+    height: 200px;
+  }
+}
+
+.coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: #d8b4fe;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
 .cs-split-text {
   display: flex;
   flex-direction: column;
@@ -473,6 +572,22 @@
 
 .cs-fullscreen {
   margin-bottom: 80px;
+}
+
+.cs-screen-link {
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cs-screen-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(168, 85, 247, 0.15);
+}
+
+.cs-screen-link:hover .cs-screen-frame {
+  border-color: rgba(168, 85, 247, 0.5);
 }
 
 /* ── Case Study Outcome block ── */
