@@ -1,9 +1,8 @@
 const NAV_HTML = `
 <nav class="nav">
   <div class="container nav-inner">
-    <a class="logo" href="index.html" aria-label="Mariz portfolio home">
-      <span class="logo-mark">∞</span>
-      <span>Mariz</span>
+    <a class="logo" href="index.html" aria-label="marizdesign.dev portfolio home">
+      <span>marizdesign<span class="logo-dot">.</span>dev</span>
     </a>
     <div class="nav-links">
       <a href="index.html#about">About</a>

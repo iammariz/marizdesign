@@ -27,7 +27,7 @@ body {
     radial-gradient(circle at 10% 25%, rgba(168, 85, 247, 0.18), transparent 28rem),
     linear-gradient(135deg, #030305 0%, #070711 45%, #0d061a 100%);
   color: var(--white);
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
 }
 
@@ -97,10 +97,12 @@ a {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-weight: 900;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.logo-dot {
+  color: #a855f7;
 }
 
 .logo-mark {
@@ -432,6 +434,27 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
+}
+
+.about-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #d8b4fe;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.about-text-link:hover {
+  color: var(--white);
+  transform: translateX(4px);
+}
+
+.about-text-link svg {
+  width: 16px;
+  height: 16px;
 }
 
 .panel {
@@ -847,6 +870,197 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 14px;
+}
+
+/* ── Beyond Design Page ── */
+
+.beyond-page {
+  overflow: hidden;
+}
+
+.beyond-hero {
+  padding: 140px 0 70px;
+  position: relative;
+}
+
+.beyond-hero::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  top: 90px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.24), transparent 68%);
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.beyond-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.7fr);
+  gap: 56px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.beyond-kicker {
+  display: inline-flex;
+  width: fit-content;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(168, 85, 247, 0.14);
+  border: 1px solid rgba(168, 85, 247, 0.28);
+  color: #d8b4fe;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.beyond-hero-copy h1 {
+  font-size: clamp(48px, 8vw, 110px);
+  line-height: 0.92;
+  letter-spacing: -0.075em;
+  max-width: 900px;
+  margin-bottom: 28px;
+}
+
+.beyond-hero-copy p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.65;
+}
+
+.beyond-photo-card {
+  min-height: 430px;
+  border-radius: 40px;
+  padding: 18px;
+  background: linear-gradient(145deg, rgba(168, 85, 247, 0.28), rgba(255, 255, 255, 0.04)), rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(216, 180, 254, 0.22);
+  box-shadow: 0 30px 90px rgba(20, 10, 40, 0.55);
+  transform: rotate(2deg);
+}
+
+.beyond-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 394px;
+  object-fit: cover;
+  display: block;
+  border-radius: 30px;
+}
+
+.beyond-photo-placeholder svg {
+  width: 42px;
+  height: 42px;
+}
+
+.beyond-photo-placeholder span {
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.beyond-story-section {
+  padding: 40px 0 130px;
+}
+
+.beyond-story-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+
+.beyond-story-card {
+  position: relative;
+  min-height: 300px;
+  padding: 30px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+}
+
+.beyond-story-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -30% -45% auto;
+  width: 240px;
+  height: 240px;
+  border-radius: 999px;
+  background: rgba(168, 85, 247, 0.18);
+  filter: blur(6px);
+}
+
+.beyond-story-card h2 {
+  position: relative;
+  font-size: clamp(24px, 2.5vw, 34px);
+  letter-spacing: -0.04em;
+  margin: 22px 0 14px;
+}
+
+.beyond-story-card p {
+  position: relative;
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 15.5px;
+}
+
+.beyond-emoji {
+  position: relative;
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 20px;
+  font-size: 28px;
+  background: rgba(168, 85, 247, 0.16);
+  border: 1px solid rgba(216, 180, 254, 0.18);
+}
+
+.beyond-story-card.coffee,
+.beyond-story-card.cats {
+  grid-column: span 2;
+}
+
+.beyond-story-card.travel,
+.beyond-story-card.learning,
+.beyond-story-card.family {
+  grid-column: span 3;
+}
+
+@media (max-width: 980px) {
+  .beyond-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .beyond-photo-card {
+    transform: none;
+  }
+
+  .beyond-story-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .beyond-story-card.coffee,
+  .beyond-story-card.cats,
+  .beyond-story-card.learning,
+  .beyond-story-card.travel,
+  .beyond-story-card.family {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .beyond-hero {
+    padding-top: 110px;
+  }
+
+  .beyond-story-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 footer {
