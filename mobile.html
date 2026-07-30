@@ -44,15 +44,15 @@
     <section class="gallery-section">
       <div class="container">
         <div class="gallery-grid mobile-gallery-grid reveal">
-          <div class="gallery-item mobile-gallery-item">
+          <button class="gallery-item mobile-gallery-item image-lightbox-trigger" type="button" data-full-image="img-portfolio/mobile/mobile-1.webp" data-image-alt="Mobile application design screen 1">
             <img src="img-portfolio/mobile/mobile-1.webp" alt="Mobile application design screen 1" loading="lazy">
-          </div>
-          <div class="gallery-item mobile-gallery-item">
+          </button>
+          <button class="gallery-item mobile-gallery-item image-lightbox-trigger" type="button" data-full-image="img-portfolio/mobile/mobile-2.webp" data-image-alt="Mobile application design screen 2">
             <img src="img-portfolio/mobile/mobile-2.webp" alt="Mobile application design screen 2" loading="lazy">
-          </div>
-          <div class="gallery-item mobile-gallery-item">
+          </button>
+          <button class="gallery-item mobile-gallery-item image-lightbox-trigger" type="button" data-full-image="img-portfolio/mobile/mobile-3.webp" data-image-alt="Mobile application design screen 3">
             <img src="img-portfolio/mobile/mobile-3.webp" alt="Mobile application design screen 3" loading="lazy">
-          </div>
+          </button>
         </div>
       </div>
     </section>
@@ -69,6 +69,11 @@
     </section>
 
   </main>
+
+  <div class="image-lightbox" aria-hidden="true">
+    <button class="image-lightbox-close" type="button" aria-label="Close image"><i data-lucide="x"></i></button>
+    <img src="" alt="">
+  </div>
 
   <div id="site-footer"></div>
 

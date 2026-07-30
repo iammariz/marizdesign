@@ -82,6 +82,34 @@ function initComponents() {
     el.style.transitionDelay = `${Math.min(i * 60, 400)}ms`;
     revealObserver.observe(el);
   });
+
+  const lightbox = document.querySelector(".image-lightbox");
+  const lightboxImg = lightbox?.querySelector("img");
+  const closeLightbox = () => {
+    if (!lightbox || !lightboxImg) return;
+    lightbox.classList.remove("active");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImg.src = "";
+    lightboxImg.alt = "";
+  };
+
+  document.querySelectorAll(".image-lightbox-trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      if (!lightbox || !lightboxImg) return;
+      lightboxImg.src = trigger.dataset.fullImage;
+      lightboxImg.alt = trigger.dataset.imageAlt || "Full image preview";
+      lightbox.classList.add("active");
+      lightbox.setAttribute("aria-hidden", "false");
+    });
+  });
+
+  lightbox?.addEventListener("click", (event) => {
+    if (event.target === lightbox || event.target.closest(".image-lightbox-close")) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeLightbox();
+  });
 }
 
 document.addEventListener("DOMContentLoaded", initComponents);

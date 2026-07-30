@@ -497,9 +497,15 @@
 
 .website-thumb {
   display: block;
+  width: 100%;
+  padding: 0;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid rgba(168, 85, 247, 0.2);
+  background: transparent;
+  color: inherit;
+  cursor: zoom-in;
+  text-align: left;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -519,6 +525,51 @@
   height: 100%;
   object-fit: cover;
   object-position: top;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 72px 24px 32px;
+  background: rgba(3, 3, 8, 0.88);
+  backdrop-filter: blur(18px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  overflow: auto;
+}
+
+.image-lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.image-lightbox img {
+  width: min(100%, 1200px);
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5);
+}
+
+.image-lightbox-close {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  background: rgba(18, 17, 32, 0.9);
+  color: var(--text);
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {
@@ -959,10 +1010,16 @@
 }
 
 .gallery-item {
+  display: block;
+  width: 100%;
+  padding: 0;
   border-radius: 18px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.06);
+  color: inherit;
+  cursor: zoom-in;
+  text-align: left;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
